@@ -15,86 +15,115 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
+          scrollDirection: Axis.vertical,
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
-                margin: EdgeInsets.only(left: 10, top: 10),
+                margin: EdgeInsets.only(left: 10),
                 child: Text.rich(
                   TextSpan(
-                    text: 'Welcome back',
-                    style: GoogleFonts.openSans(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28
-                    )
-                  ),
+                      text: 'Welcome back',
+                      style: GoogleFonts.openSans(
+                          fontWeight: FontWeight.bold, fontSize: 28)),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    IceCreamCard(flavorColor: Colors.redAccent,flavor: 'Strawberry',),
-                    IceCreamCard(flavorColor: Colors.yellow.shade600,flavor: 'Strawberry',),
-                    IceCreamCard(flavorColor: Colors.teal.shade300,flavor: 'Strawberry',)
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    ),
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    ),
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    )
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Container(
                 margin: EdgeInsets.only(left: 10, top: 10),
                 child: Text.rich(
                   TextSpan(
-                    text: 'Recently played',
-                    style: GoogleFonts.openSans(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28
-                    )
-                  ),
+                      text: 'Recently played',
+                      style: GoogleFonts.openSans(
+                          fontWeight: FontWeight.bold, fontSize: 28)),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    IceCreamCard(flavorColor: Colors.redAccent,flavor: 'Strawberry',),
-                    IceCreamCard(flavorColor: Colors.yellow.shade600,flavor: 'Strawberry',),
-                    IceCreamCard(flavorColor: Colors.teal.shade300,flavor: 'Strawberry',)
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    ),
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    ),
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    )
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Container(
                 margin: EdgeInsets.only(left: 10, top: 10),
                 child: Text.rich(
                   TextSpan(
-                    text: 'Recently played',
-                    style: GoogleFonts.openSans(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28
-                    )
-                  ),
+                      text: 'Recently played',
+                      style: GoogleFonts.openSans(
+                          fontWeight: FontWeight.bold, fontSize: 28)),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    IceCreamCard(flavorColor: Colors.redAccent,flavor: 'Strawberry',),
-                    IceCreamCard(flavorColor: Colors.yellow.shade600,flavor: 'Strawberry',),
-                    IceCreamCard(flavorColor: Colors.teal.shade300,flavor: 'Strawberry',)
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    ),
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    ),
+                    IceCreamCard(
+                      flavorColor: Colors.blue,
+                      flavor: 'Strawberry',
+                    )
                   ],
                 ),
               )
             ],
-          )
-      ),
+          )),
     );
   }
 }

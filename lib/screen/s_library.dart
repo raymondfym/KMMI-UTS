@@ -1,6 +1,5 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:uts_project/model.dart';
 
 class LibraryScreen extends StatefulWidget {
   LibraryScreen({Key? key}) : super(key: key);
@@ -13,49 +12,47 @@ class _LibraryScreenState extends State<LibraryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
+      body: Container(
+        color: Colors.blue,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(height: 30,),
-              Container(
-                margin: EdgeInsets.only(left: 10, top: 10),
-                child: Text.rich(
-                  TextSpan(
-                    text: 'Your library',
-                    style: GoogleFonts.openSans(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28
-                    )
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Tap to Shazam',
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            AvatarGlow(
+              endRadius: 200,
+              animate: true,
+              child: GestureDetector(
+                onTap: () => print('tapped'),
+                child: Material(
+                  shape: CircleBorder(),
+                  elevation: 8,
+                  child: Container(
+                    padding: EdgeInsets.all(40),
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.blue.shade900
+                    ),
+                    child: Image.asset(
+                      'lib/assets/images/logoHimakom.png',
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: [
-                    Card(
-                      child: ListTile(
-                        title: Text("Codesinsider.com"),
-                      ),
-                      elevation: 8,
-                      shadowColor: Colors.green,
-                      margin: EdgeInsets.all(20),
-                      shape:  OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.green, width: 1)
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(height: 20,)
-            ],
-          )
-      ),
+            )
+          ],
+        ),
+      )
     );
   }
 }
