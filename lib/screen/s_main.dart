@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import '../model.dart';
+import '../CardTemplate.dart';
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key? key}) : super(key: key);
+  MainScreen({Key key}) : super(key: key);
 
   @override
   _MainScreenState createState() => _MainScreenState();
@@ -28,8 +27,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: Text.rich(
                   TextSpan(
                       text: 'Welcome back',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.bold, fontSize: 28)),
+                     ),
                 ),
               ),
               SizedBox(
@@ -62,8 +60,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: Text.rich(
                   TextSpan(
                       text: 'Recently played',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.bold, fontSize: 28)),
+                    ),
                 ),
               ),
               SizedBox(
@@ -96,8 +93,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: Text.rich(
                   TextSpan(
                       text: 'Recently played',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.bold, fontSize: 28)),
+                      ),
                 ),
               ),
               SizedBox(
